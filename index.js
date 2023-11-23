@@ -29,7 +29,7 @@ app.get('/captcha', (req, res) => {
       await button.click();
       await button.click();
       console.log('Button clicked2');
-      await page.$eval('.cB9M7', el => el.value = 'https://syedforum.000webhostapp.com/img/captcha.png');
+      await page.$eval('.cB9M7', el => el.value = 'https://rthgthythyth.onrender.com/img');
       setTimeout(async () => {
         const submit = await page.waitForSelector('div.Qwbd3');
         console.log('----------->', submit);
@@ -63,4 +63,4 @@ app.get('/captcha', (req, res) => {
     }
   })();
 })
-app.listen(process.env.PORT, () => { console.log('listening') })
+app.listen(3000, () => { console.log('listening') })
