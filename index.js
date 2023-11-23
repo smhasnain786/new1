@@ -5,7 +5,7 @@ app.get('/', (req, res) => { res.send('hi') })
 app.get('/captcha', (req, res) => {
   (async () => {
     try {
-      const browser = await puppeteer.launch({ headless: false, args: [] });
+      const browser = await puppeteer.launch();
       const page1 = await browser.newPage();
       await page1.goto('https://services.ecourts.gov.in/ecourtindia_v6/'); console.log('site loaded');
       // const radio = await page1.waitForSelector('input#rdb_0'); 
